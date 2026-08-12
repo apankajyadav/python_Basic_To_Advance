@@ -178,3 +178,46 @@ print(list_nested)
 
 int_list.insert(0,2000)
 print(int_list)
+
+#E 46 Add an element at the middle of a list.
+print(int_list)
+midd=len(int_list)//2
+int_list.insert(midd,500)
+print(int_list)
+#E47 Remove the first occurrence of a specific value.
+int_list=[8,2,3,45,9]
+int_list.remove(2)
+print(int_list)
+
+
+#E48  Remove all occurrences of a specific value.
+int_list=[8,2,3,45,9,3]
+remv_val=3
+new_lst=[]
+for i in int_list:
+    if i!=remv_val:
+        new_lst.append(i)
+print(new_lst)
+        
+
+
+
+#E49 Find the first occurrence of a value.
+
+int_list=[8,2,3,45,9,3]
+val_pos=3
+for i in range(len(int_list)):
+    if int_list[i]==val_pos:
+        print(i)
+        break
+
+
+#E50 Find the last occurrence of a value.
+
+int_list=[8,2,3,45,3,9]
+val_pos=3
+for i in range(len(int_list)-1,-1,-1):
+    if int_list[i]==val_pos:
+        print(i)
+        break
+
