@@ -1,0 +1,301 @@
+#51. Count how many times a value occurs in a list.
+lst=[1,233,45,67,1,2,5,6,1]
+count=0
+value=int(input("Enter value from list you want to count occurrnece "))
+for i in lst:
+    if value==i:
+        count+=1
+print(f"occurence of {value} is {count} Times")
+
+#52 & 53  Check whether two lists are equal.
+
+L1=[1,2,3,4,5]
+L2=[1,2,3,4,5,9]
+
+if L1 == L2:
+    print("List are Equal")
+else:
+    print(print("List are not Equal"))
+
+
+# E54 & E55 Check whether one list is smaller than another list
+if len(L1)<len(L2):
+    print("L1 list is smaller")
+else:
+    print("L2 list greater")
+
+#E56 Check whether a list is empty using its length.
+if len(L1)==0:
+    print("List is Empty")
+else:
+    print("Not Empty")
+
+
+#E57  Check whether a list is empty using boolean evaluation.
+
+new_list = []
+
+r=bool(new_list)
+print(r)
+if r:
+    print("List is not Empty")
+else:
+    print("List is empty")
+
+#58. Find the length of a list without using len().  
+L2=[1,2,3,4,5,9]
+count=0
+for c in L2:
+    count+=1
+print(count)
+
+#59 Find the last index of a list.
+L2=[1,2,3,4,5,9]
+
+print(len(L2)-1)
+
+#60  Access every second element using slicing.
+
+L2=[1,2,3,4,5,9,8,5,76,43,89,0,9]
+print(L2[0::2])
+
+# 61 Access every third element using slicing.
+
+L2=[1,2,3,4,5,9,8,5,76,43,89,0,9,10,23,45,55]
+print(L2[0::3])
+
+#62 Create a shallow copy of a list
+L3_copy=L2.copy()
+print(L3_copy)
+
+#63 Create a nested list.
+Nested_lst=[[1,2,3],[1,2,3,4,5],[1,2]]
+N_lst2=[1,2,3,4]
+
+#64 Add a new list as one element using append().
+Nested_lst.append([9,8,7,6,5,4])
+print(Nested_lst)
+
+#65 Add elements from another list using extend().
+Nested_lst.extend(N_lst2[0:1])
+print(Nested_lst)
+
+#E66 Compare the result of append() and extend() on two lists.
+L1=[1,2,3,4,5]
+L2=[9,8]
+#L1.append(L2)
+#print(f" Append list {L1}")
+
+L1.extend(L2)
+print(f"Extend list {L1}")
+
+#E67 Remove and return the last element using pop().
+L1=[1,2,3,4,5]
+last_ele= L1.pop(-1)
+print(last_ele)
+
+#68 Remove and return an element from a specific index using pop().
+
+L1=[1,2,3,4,5]
+last_ele= L1.pop(3)
+print(last_ele)
+
+# 69 Insert an element before the last element.
+L1=[1,2,3,4,5]
+L1.insert(-1,9)
+print(L1)
+
+# 70 Insert an element after the first element.
+L1=[1,2,3,4,5]
+L1.insert(0,8)
+print(L1)
+# 71 Remove the first element from a list.
+L1=[1,2,3,4,5]
+L1.pop(0)
+print(L1)
+
+# 72 Remove the last element from a list.
+L1=[1,2,3,4,5]
+#L1.pop(len(L1)-1)
+L1.pop(-1)
+print(L1)
+
+# 73 Remove elements from a specific range of indexes.
+L1=[1,2,3,4,5]
+del L1[0:3]
+print(L1)
+
+#74 Extract elements from index 2 to index 5.
+L1=[1,2,3,4,5,9,8,7]
+#print(L1[2:6])
+
+#75 Extract elements from the beginning up to index 4.
+print(L1[0:5])
+
+# 76 Extract elements from index 3 to the end.
+L1=[1,2,3,4,5,9,8,7]
+print(L1[3:])
+
+# 77 Reverse only a slice of a list.
+L1=[1,2,3,4,5,9,8,7]
+
+L1[5:]=L1[5:][::-1]
+print(L1)
+
+# 78 Replace the first two elements using slicing.
+L1=[1,2,3,4,5,9,8,7]
+L1[1:4]=[4,5,6,7]
+print(L1)
+
+#79 Replace the last two elements using slicing.
+L1=[1,2,3,4,5,9,8,7]
+L1[-2:]=[7,8]
+print(L1)
+
+#E80 Delete the first two elements using slicing.
+L1=[1,2,3,4,5,9,8,7]
+del L1[0:3]
+print(L1)
+#E81 Delete the last two elements using slicing.
+L1=[1,2,3,4,5,9,8,7]
+del L1[-2:]
+print(L1)
+
+# 82 Merge three lists into one list.
+L1=[1,2,3]
+L2=[4,5]
+L3=[6,7,8,9,0]
+
+L1+=L2+L3
+print(L1)
+
+#E83 Create a list containing repeated values using *.
+Listt=['ABCD']*7
+print(Listt)
+
+#84 Find whether two lists contain the same elements in the same order.\
+L1=[1,2,3]
+L2=[1,5,3]
+if L1== L2:
+    print("Both List contain same elemnet")
+else:
+    print("Not same ")
+
+#85 Find whether a list contains duplicate values using list operations.
+L1=[1,2,3,4,5,2]
+if len(set(L1))!=len(L1):
+    print("list contain Duplicate Value")
+else:
+    print("List not contain duplicate value")
+
+# 86 Remove duplicates from a list while preserving order.
+L1=[1,2,3,4,5,2,3,4,1]
+no_dup=[]
+for i in L1:
+    if i not in no_dup:
+        no_dup.append(i)
+print(no_dup)
+
+# Ex.87 Create a list from a tuple using list().
+T1=(1,2,3,4,5,6)
+List_T=list(T1)
+print(List_T)
+print(type(List_T))
+
+#88 Create a list from a string using list().
+s='ABCDEFG'
+l_s=list(s)
+print(l_s)
+print(type(l_s))
+
+#89 Convert a range object into a list.
+rng=range(1,10)
+print(list(rng))
+
+# 90 Convert a list into a tuple using tuple().
+list_1=[1,2,3,4,5]
+lt=tuple(list_1)
+print(lt)
+print(type(lt))
+
+#91 Convert a list into a string using join().
+list_1=[1,2,3,4,5]
+j_list=''.join(map(str,list_1))
+print(j_list)
+
+#92 Find the number of elements in a nested list.
+list_1=[[1,2,3,4,5],[9,8,7]]
+print(len(list_1[1]))
+
+#93 Access the first element of each nested list.
+list_1=[[1,2,3,4,5],[9,8,7]]
+print(list_1[0][0])
+print(list_1[1][0])
+
+#94 Change an element inside a nested list.
+list_1=[[1,2,3,4,5],[9,8,7]]
+list_1[0][3]=0
+print(list_1)
+
+# 95 Add an element inside a nested list.
+list_1=[[1,2,3,4,5],[9,8,7]]
+list_1[1].insert(3,5)
+print(list_1)
+
+#96 Remove an element inside a nested list.
+list_1=[[1,2,3,4,5],[9,8,7]]
+list_1[1].remove(7)
+print(list_1)
+
+#97 Create a list containing lists as its elements.(Nested_list)
+
+list_1=[[1,2,3,4],[9,8],[1,2,5,4,7,8]]
+print(list_1)
+
+#98 Create a copy of a nested list and observe shallow-copy behavior.
+list_1=[[1,2,3,4],[9,8],[1,2,5,4,7,8]]
+c_list=list_1.copy()
+print(f"copy list {c_list}")
+c_list[0].append(0)
+print(f"main list {list_1}")
+
+#99  Flatten a one-level nested list using list operations.
+list_1=[[1,2,3,4],[9,8],[1,2,5,4,7,8]]
+
+new_list=[]
+
+for i in list_1:
+    new_list.extend(i)
+
+print(new_list)
+
+
+#100 
+L1=[1, 2, 3, 4, 9, 8, 1, 2, 5, 4, 7, 8]
+# append()
+L1.append(0)
+print("After append:", L1)
+
+# insert()
+L1.insert(1, 9)
+print("After insert:", L1)
+
+#  remove()
+L1.remove(2)
+print("After remove:", L1)
+
+#  pop()
+L1.pop()
+print("After pop:", L1)
+
+#  sort()
+L1.sort()
+print("After sort:", L1)
+
+#  reverse()
+L1.reverse()
+print("After reverse:", L1)
+
+# clear()
+L1.clear()
+print("After clear:", L1)
