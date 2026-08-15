@@ -1,3 +1,4 @@
+#check enter number is Armstone or not !
 Num=int(input("Enter Number You want to chechk its amrngstone or not : "))
 result=0
 temp=Num
