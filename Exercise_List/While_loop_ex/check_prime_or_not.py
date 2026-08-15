@@ -1,3 +1,4 @@
+#check prime or not !
 Num=int(input("Enter Number you want to check : "))
 i=2
 is_prime= True 
