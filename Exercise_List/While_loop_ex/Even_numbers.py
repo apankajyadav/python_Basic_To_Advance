@@ -1,3 +1,4 @@
+#prinit List of Even number  between two numbwe !
 s_num=int(input("Entere starting range of number :"))
 l_num=int(input("Entere ending range of number : "))
 
