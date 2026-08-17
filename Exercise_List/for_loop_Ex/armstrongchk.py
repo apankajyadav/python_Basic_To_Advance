@@ -1,4 +1,4 @@
-#check armstrong or not 
+#check armstrong or not check
 num=1535
 temp=num
 res=0
