@@ -83,7 +83,6 @@ def issue_book():
     #Find Member 
     member= None
     for m in members:
-        print(m)
         if m["id"]==member_id:
             member = m
             break
@@ -106,7 +105,7 @@ def issue_book():
 
     #Check Avialibity
     if int(book["quantity"])<=0:
-        print("Sorry!! This Book Currently Avilabe")
+        print("Sorry!! This Book Currently UnAvilabe")
         return
 
     #issue Book
@@ -164,20 +163,30 @@ def view_issued_books():
     if len(issued_books) == 0:
         print("No Books are Currently issued.")
         return
-    print("\n=================================================List Of Issued Book========================================================================")
+
+    print("\n================ LIST OF ISSUED BOOKS ================\n")
 
     for record in issued_books:
-        member= None
-        book=None
-        #Find Member Details 
-        for b in members:
-            if b["id"] ==record["member_id"]:
-                book=b
+
+        member = None
+        book = None
+
+        # Find Member Details
+        for m in members:
+            if m["id"] == record["member_id"]:
+                member = m
                 break
-            print("Member Id:",record["member_id"])
-            print("Member Name:",record["name"])
-            print("BOOK Name:",book["title"])
-            print("----------------------------------------------------------------------------------------------------------------------------")
+
+        # Find Book Details
+        for b in books:
+            if b["id"] == record["book_id"]:
+                book = b
+                break
+
+        print("Member ID :", record["member_id"])
+        print("Member Name :", member["name"])
+        print("Book ID :", record["book_id"])
+        print("Book Title :", book["title"])
 
 
 def main_menu():
